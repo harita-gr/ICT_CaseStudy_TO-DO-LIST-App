@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap');
 *{
     margin:0;
     padding: 0;
@@ -110,21 +110,34 @@ ul button{
     display: flex;
     border: 1px solid black;
     width: 100vw;
+   
+}
+.date-time h2{
+    font-weight: bold;
+    /* font-family: 'Ma Shan Zheng', cursive; */
 }
 .date-time h3{
     float: right;
     margin: 1vh 3vw;
 }
-
+.date-time i{
+    color:green;
+    margin-top:5px;
+    font-size: 1.8rem;
+    margin-left:5px;
+}
 .progress{
     position: relative !important;
     top:10px;
     float: left;
-    right:-100px;
+    /* right:-100px; */
     width:20vw;
     height: 5vh;
 }
 
+.achieve{
+    display: none;
+}
 /* Table */
 table{
     padding: 5vh 5vw;
@@ -135,4 +148,18 @@ table{
 th, td{
     justify-content: center;
     align-items: center;
+}
+
+#image{
+   width:700px;
+   height:100px;
+   
+}
+
+footer{
+    position: absolute;
+    bottom: -100%;
+    width:100vw;
+    background-color:pink;
+    text-align: center;
 }

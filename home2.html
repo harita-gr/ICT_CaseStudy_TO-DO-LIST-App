@@ -4,25 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/2a534a6860.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="home2.css">
+    <link rel="stylesheet" href="styles/home2.css">
     <title>Home Page</title>
 </head>
 <body>
     <!-- Nav Bar -->
-    <div class="nav-bar">
+    <div class="nav-bar" style="position: fixed;">
         <div id="content">
-            <h2>Organize it All</h2>
+            <h2> <a href="home2.html" style="text-decoration: none;color: white;">Organize it All</a></h2>
             <i class="fas fa-check-circle"></i>
             <h3> Hello Hustler</h3>
         </div>
         <div class="nav-links">
             <ul>
                 <button> 🞬 </button>
-                <li><a href="to_do_2.html" >MY TASKS</a></li>
-                <li><a href="#">LOGOUT</a></li>
+                <li><a href="to_do_2.html" class="active">MY TASKS</a></li>
+                <li><a href="index.html" onclick="alert('Do you want to Logout?');preventBack()">LOGOUT</a></li>
             </ul>
          </div>
     </div>
       <!-- /Nav Bar -->
+      <div id="image">
+          <img src="images/alex-witt-illustration-scaled.jpg">
+      </div>
+      <!-- Footer -->
+      <div id="footer">
+      <footer>
+        <h5> Copyright 2020 @ Harita Ravindranath</h5>
+    </footer>
+     </div>
+    <!-- Footer -->
+     
 </body>
 </html>

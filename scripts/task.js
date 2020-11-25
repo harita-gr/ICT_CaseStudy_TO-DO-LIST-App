@@ -23,26 +23,15 @@ function CreateTableFromJSON(){
             for(var i=0; i<20;i++){
                output += "<tr>";
               //  output += "<td> <input type='checkbox' class='cbox'> </td>";
-               output += "<td><input type='checkbox' class='cbox'> </td>";
+               output += "<td><input type='checkbox' class='cbox' style='cursor:pointer'> </td>";
                output += "<td>"+ response[i].title+"</td>";
-               output += "<td> Delete </td>"
+               output += "<td><i class='fas fa-trash-alt' style='cursor:pointer'></i> </td>"
                output += "</tr>";
             }
             output+="</tbody></table>"
             document.getElementById("todo-list-table").innerHTML=output;
             const list = document.getElementsByClassName('cbox');
             console.log(list.length);
-
-            // $(document).ready(function(){
-            //     $('input[type="checkbox"]').click(function(){
-            //         if($(this).prop("checked") == true){
-            //             console.log("Checkbox is checked.");
-            //         }
-            //         else if($(this).prop("checked") == false){
-            //             console.log("Checkbox is unchecked.");
-            //         }
-            //     });
-            // });
 
             function countCheckBox()
             {
@@ -72,10 +61,17 @@ function CreateTableFromJSON(){
                                                 });}
                                                 let promise = countCheckBox(); 
                                                 promise 
-                                                .then(function() {alert('Daily Goal Achieved! 5 tasks completed'); })
-        
+                                                .then(function() {
+                                                    alert('Daily Goal Achieved! 5 tasks completed'); 
+                                                    document.getElementById('achieve').style.display="flex";
+                                                })
                                             }}
    
     xhttp.open("GET","https://jsonplaceholder.typicode.com/todos",true);
     xhttp.send();
 }
+
+// To disable back button after logging out
+function preventBack(){window.history.forward();}
+setTimeout("preventBack()", 0);
+window.onunload=function(){null};
