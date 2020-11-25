@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,input {
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.nav-bar{
+    position: relative;
+    width:100vw;
+    height:50px;
+    margin-top:20px;
+    border:1px solid red;
+    background-color:  rgb(219, 44, 44);
+    color: white;
+    /* display:flex; */
+}
+
+#content{
+    position: absolute;
+    margin-left: 50px;
+    margin-top:-6px;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+#content i{
+    position: relative;
+    color:white;
+    float: right;
+    left: 25px;
+    margin-top:-35px;
+}
+#content h3{
+    margin-left:50px;
+    color: white;
+    font-size: 4vh;
+}
+.nav-links{
+    /* position: absolute; */
+    float: right;
+}
+
+.nav-links ul {
+    display: flex;
+    list-style: none;
+}
+.nav-links ul li{
+    /* padding-right: 50px; */
+    margin:0 2vw;
+    margin-top:5px;
+    font-size: 4.5vh;
+   
+}
+.nav-links ul li a{
+    text-decoration: none;
+    float: right;
+    color: white;
+    height: 100%;
+}
+
+.nav-links ul li a:hover{
+    color:  rgb(219, 44, 44);
+    background-color:white;
+}
+
+ul button{
+    display: none;
+}
+@media only screen and (max-width: 500px) {
+    /*shows elements in a column*/
+    ul{
+      flex-direction: column;
+    }
+    
+    /* deletes margin on top or bottom of the a tag*/
+    li{
+      margin: 0;
+      
+    }
+   /* makes sure that the a tag will take the entire screen*/
+    a{
+      display: block;
+      color:rgb(219, 44, 44);  
+      border:1px solid black;
+      background-color:grey;  
+    }
+    ul button{
+        /*makes the button visible*/
+        display: block;
+        padding: 2.7vw;
+        font-size: 3vh;
+        background-color: #f0f0f0;
+        border: none;
+        
+        /*outline none removes the default blue border that appears anytime you click on the button*/
+        outline: none;
+        
+        cursor: pointer;
+  }
+}
+
+/*  TASK PAGE */
+.date-time{
+    position: relative;
+    display: flex;
+    border: 1px solid black;
+    width: 100vw;
+}
+.date-time h3{
+    float: right;
+    margin: 1vh 3vw;
+}
+
+.progress{
+    position: relative !important;
+    top:10px;
+    float: left;
+    right:-100px;
+    width:20vw;
+    height: 5vh;
+}
+
+/* Table */
+table{
+    padding: 5vh 5vw;
+    justify-content: center;
+    align-items: center;
+}
+
+th, td{
+    justify-content: center;
+    align-items: center;
+}
