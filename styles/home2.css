@@ -221,6 +221,8 @@ footer{
 }
 .event-container h2{
     text-align: center;
+    background-color: green;
+    color:white;
 }
 .event-container h2 i{
     cursor: pointer;
@@ -234,10 +236,12 @@ footer{
 }
 
 .event-container .event{
-    box-shadow: 0 4px 16px -8px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 16px -8px rgba(0, 0, 0, 0.7);
     display: flex;
     border-radius: 8px;
-    margin: 32px 0;
+    height: 200px;
+
+    /* margin: 32px 0; */
 }
 
 .event .event-left{
