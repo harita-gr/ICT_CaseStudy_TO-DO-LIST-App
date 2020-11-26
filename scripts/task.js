@@ -25,14 +25,25 @@ function CreateTableFromJSON(){
               //  output += "<td> <input type='checkbox' class='cbox'> </td>";
                output += "<td><input type='checkbox' class='cbox' style='cursor:pointer'> </td>";
                output += "<td>"+ response[i].title+"</td>";
-               output += "<td><i class='fas fa-trash-alt' style='cursor:pointer'></i> </td>"
+               output += "<td><i class='fas fa-trash-alt' style='cursor:pointer'></i> </td>";
                output += "</tr>";
             }
             output+="</tbody></table>"
             document.getElementById("todo-list-table").innerHTML=output;
             const list = document.getElementsByClassName('cbox');
+            const delBtn_List = document.getElementsByClassName('fa-trash-alt');
             console.log(list.length);
-
+            console.log(delBtn_List.length);
+            //Delete an element upon clicking trash icon
+                    $(document).ready(function(){
+                                         $('.fa-trash-alt').click(function() {  
+                                                             var parent=$(this).parent().closest('tr');
+                                                             console.log(parent);
+                                                             parent.remove();                                         
+                                                            });
+                                        });
+                                                                 
+            //Count checkbox using Promise
             function countCheckBox()
             {
                   let count=0;
@@ -40,11 +51,13 @@ function CreateTableFromJSON(){
 
                     $(document).ready(function(){
                                          $('input[type="checkbox"]').click(function() {                         
-                                                                            if($(this).prop("checked") == true){
+                                                                            if($(this).prop("checked") == true){      
+                                                                    
                                                                             console.log("Checkbox is checked.");
                                                                              count++;
                                                                              let width=count*20;
                                                                              $('.progress-bar').css("width",`${width}%`);
+
                                                                              
                                                                             }
                                                                             else if($(this).prop("checked") == false){
@@ -69,6 +82,12 @@ function CreateTableFromJSON(){
    
     xhttp.open("GET","https://jsonplaceholder.typicode.com/todos",true);
     xhttp.send();
+}
+
+//add
+function addItem()
+{
+
 }
 
 // To disable back button after logging out
