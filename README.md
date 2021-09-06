@@ -3,4 +3,4 @@ Using JS, Callback,Promise - Responsive
 
 
 HOSTED URL
-https://haritatoboso.github.io/ICT_CaseStudy_TO-DO-LIST-App/
+https://harita-gr.github.io/ICT_CaseStudy_TO-DO-LIST-App/
