@@ -1,7 +1,7 @@
 # TO DO List App :white_check_mark:
 > App for organizing daily tasks
 
-
+<img src="https://github.com/harita-gr/ICT_CaseStudy_TO-DO-LIST-App/blob/54784217245d767003fc703142afdf5ed8f57707/cover_image.jpg" alt="cover" />
 ---
 ### Built Using
 - HTML5
